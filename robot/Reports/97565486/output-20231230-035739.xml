@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20231230 03:57:39.861" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="/home/code/robot/TestCases">
+<suite id="s1-s1" name="API Test" source="/home/code/robot/TestCases/API_Test">
+<suite id="s1-s1-s1" name="API Demo" source="/home/code/robot/TestCases/API_Test/API_Demo.robot">
+<test id="s1-s1-s1-t1" name="Quick Get Request Test" line="6">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://www.google.com</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231230 03:57:40.149" level="INFO">GET Request : url=https://www.google.com/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231230 03:57:40.149" level="INFO">GET Response : url=https://www.google.com/ 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 30 Dec 2023 03:57:40 GMT', 'Expires': '-1', 'Cache-Control': 'private, max-age=0', 'Content-Type': 'text/html; charset=ISO-8859-1', 'Content-Security-Policy-Report-Only': "object-src 'none';base-uri 'self';script-src 'nonce-G19OPmib84oxBQUaA0BtSg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp", 'P3P': 'CP="This is not a P3P policy! See g.co/p3phelp for more info."', 'Content-Encoding': 'gzip', 'Server': 'gws', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'Set-Cookie': '1P_JAR=2023-12-30-03; expires=Mon, 29-Jan-2024 03:57:40 GMT; path=/; domain=.google.com; Secure, AEC=Ackid1QnSJJ8GlbKWBKXhAxUxUxM5A4CbmVX9GGbEnpOkdganLuQefrIfg; expires=Thu, 27-Jun-2024 03:57:40 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=511=D4boXjQSYBnnJg2XsTAvJN7c9XWyzotH4LG_ODiKpC0ZHE88uqqQtFKhTZ1s41NcQwy9nhHqVgUsHUNqpHJPm944hk47A6VWo4U9mW7pDmIF7U-3sLKwe69TNfpEzO6NjkVQOAtrEt7jYML40dtl55pt3zF-b6mj1iCiRFugKe4; expires=Sun, 30-Jun-2024 03:57:40 GMT; path=/; domain=.google.com; HttpOnly', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
+ body=&lt;!doctype html&gt;&lt;html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"&gt;&lt;head&gt;&lt;meta content="text/html; charset=UTF-8" http-equiv="Content-Type"&gt;&lt;meta content="/logos/doodles/2023/seasonal-holidays-2023-6753651837110165-law.gif" itemprop="image"&gt;&lt;meta content="Seasonal Holidays 2023" property="twitter:title"&gt;&lt;meta content="Happy Holidays! #GoogleDoodle" property="twitter:description"&gt;&lt;meta content="Happy Holidays! #GoogleDoodle" property="og:description"&gt;&lt;meta content="summary_large_image" property="twitter:card"&gt;&lt;meta content="@GoogleDoodles" property="twitter:site"&gt;&lt;meta content="https://www.google.com/logos/doodles/2023/seasonal-holidays-2023-6753651837110165-2xa.gif" property="twitter:image"&gt;&lt;meta content="https://www.google.com/logos/doodles/2023/seasonal-holidays-2023-6753651837110165-2xa.gif" property="og:image"&gt;&lt;meta content="1000" property="og:image:width"&gt;&lt;meta content="400" property="og:image:height"&gt;&lt;meta content="https://www.google.com/logos/doodles/2023/seasonal-holidays-2023-6753651837110165-2xa.gif" property="og:url"&gt;&lt;meta content="video.other" property="og:type"&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce="G19OPmib84oxBQUaA0BtSg"&gt;(function(){var _g={kEI:'NJWPZbvPB8n-ptQP6fejwAg',kEXPI:'0,18168,1347299,207,4804,1132070,870537,327252,102,510,380089,16112,28687,22431,1361,12314,17585,4998,17075,38444,2872,2891,3926,213,7615,606,29843,30847,16105,230,1014,1,16916,2652,4,59617,27041,6633,7596,1,42154,2,16737,23024,5679,1020,16405,14718,4567,6253,23423,1253,33064,2,2,1,26632,8155,23350,8703,11803,8,1922,9779,42459,20199,20136,14,82,47823,5123,3030,15816,1804,7734,6072,26949,6327,477,1156,13495,950,3691,32920,5305,5209140,999,2,296,497,5994172,2803214,4251,7474661,5,16495897,4044107,16673,39683,4,4199,3,1603,3,262,3,234,3,2121276,2583,23029353,8163,4636,8409,8027,6509,163,1965,13023,4428,7459,1207,5,1905,1730,4148,4241,12753,2044,5646,421,5887,6844,2,2367,2,1296,2052,27,6,5,15,265,1390,4145,662,210,438,668,1686,77,2471,6231,2,2223,50,2623,42,4850,642,1894,242,288,484,1887,1251,961,149,2070,313,664,2163,1,6,2816,824,8,230,287,2786,589,954,770,1468,218,3,2059,256,40,271,2271,209,673,457,3366,5,590,1571,1163,1087,611,1,6,2064,370,11,48,1264,811,709,768,3,4,2,2,2,27,137,116,531,943,33,1177,273,606,591,283,248,654,32,714,332,973,1716,2151,580,310,960,585,360,38,526,2,6,2,431,1000,34,8,78,765,7,78,64,40,4,186,823,1066,224,1,1,49,560,150,1,44,70,8,1144,585,146,67,18,476,2,73,253,4,413,916,1,1,413,244,316,42,761,402,191,2183,221,560,81,215,244,2,2,4,430,216,63,3081,48,82,2,1674,50,4,823,135,507,3619,3,21732191,218,4005,5,274,814',kBL:'vZAG',kOPI:89978449};(function(){var a;(null==(a=window.google)?0:a.stvsc)?google.kEI=_g.kEI:window.google=_g;}).call(this);})();(function(){google.sn='webhp';google.kHL='en-CA';})();(function(){
+var h=this||self;function l(){return void 0!==window.google&amp;&amp;void 0!==window.google.kOPI&amp;&amp;0!==window.google.kOPI?window.google.kOPI:null};var m,n=[];function p(a){for(var b;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute("eid")));)a=a.parentNode;return b||m}function q(a){for(var b=null;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute("leid")));)a=a.parentNode;return b}function r(a){/^http:/i.test(a)&amp;&amp;"https:"===window.location.protocol&amp;&amp;(google.ml&amp;&amp;google.ml(Error("a"),!1,{src:a,glmm:1}),a="");return a}
+function t(a,b,c,d,k){var e="";-1===b.search("&amp;ei=")&amp;&amp;(e="&amp;ei="+p(d),-1===b.search("&amp;lei=")&amp;&amp;(d=q(d))&amp;&amp;(e+="&amp;lei="+d));d="";var g=-1===b.search("&amp;cshid=")&amp;&amp;"slh"!==a,f=[];f.push(["zx",Date.now().toString()]);h._cshid&amp;&amp;g&amp;&amp;f.push(["cshid",h._cshid]);c=c();null!=c&amp;&amp;f.push(["opi",c.toString()]);for(c=0;c&lt;f.length;c++){if(0===c||0&lt;c)d+="&amp;";d+=f[c][0]+"="+f[c][1]}return"/"+(k||"gen_204")+"?atyp=i&amp;ct="+String(a)+"&amp;cad="+(b+e+d)};m=google.kEI;google.getEI=p;google.getLEI=q;google.ml=function(){return null};google.log=function(a,b,c,d,k,e){e=void 0===e?l:e;c||(c=t(a,b,e,d,k));if(c=r(c)){a=new Image;var g=n.length;n[g]=a;a.onerror=a.onload=a.onabort=function(){delete n[g]};a.src=c}};google.logUrl=function(a,b){b=void 0===b?l:b;return t("",a,b)};}).call(this);(function(){google.y={};google.sy=[];google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.sx=function(a){google.sy.push(a)};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};var d=[];google.fce=function(a,b,c,e){d.push([a,b,c,e])};google.qce=d;}).call(this);google.f={};(function(){
+document.documentElement.addEventListener("submit",function(b){var a;if(a=b.target){var c=a.getAttribute("data-submitfalse");a="1"===c||"q"===c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener("click",function(b){var a;a:{for(a=b.target;a&amp;&amp;a!==document.documentElement;a=a.parentElement)if("A"===a.tagName){a="1"===a.getAttribute("data-nohref");break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);&lt;/script&gt;&lt;style&gt;#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+&lt;/style&gt;&lt;style&gt;body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1967d2}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#681da8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1967d2}a:visited{color:#681da8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #70757a #70757a #dadce0;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;color:#000;border:none;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}&lt;/style&gt;&lt;script nonce="G19OPmib84oxBQUaA0BtSg"&gt;(function(){window.google.erd={jsr:1,bv:1919,de:true};
+var h=this||self;var k,l=null!=(k=h.mei)?k:1,n,p=null!=(n=h.sdo)?n:!0,q=0,r,t=google.erd,v=t.jsr;google.ml=function(a,b,d,m,e){e=void 0===e?2:e;b&amp;&amp;(r=a&amp;&amp;a.message);void 0===d&amp;&amp;(d={});d.cad="ple_"+google.ple+".aple_"+google.aple;if(google.dl)return google.dl(a,e,d),null;if(0&gt;v){window.console&amp;&amp;console.error(a,d);if(-2===v)throw a;b=!1}else b=!a||!a.message||"Error loading script"===a.message||q&gt;=l&amp;&amp;!m?!1:!0;if(!b)return null;q++;d=d||{};b=encodeURIComponent;var c="/gen_204?atyp=i&amp;ei="+b(google.kEI);google.kEXPI&amp;&amp;(c+="&amp;jexpid="+b(google.kEXPI));c+="&amp;srcpg="+b(google.sn)+"&amp;jsr="+b(t.jsr)+"&amp;bver="+
+b(t.bv);var f=a.lineNumber;void 0!==f&amp;&amp;(c+="&amp;line="+f);var g=a.fileName;g&amp;&amp;(0&lt;g.indexOf("-extension:/")&amp;&amp;(e=3),c+="&amp;script="+b(g),f&amp;&amp;g===window.location.href&amp;&amp;(f=document.documentElement.outerHTML.split("\n")[f],c+="&amp;cad="+b(f?f.substring(0,300):"No script found.")));google.ple&amp;&amp;1===google.ple&amp;&amp;(e=2);c+="&amp;jsel="+e;for(var u in d)c+="&amp;",c+=b(u),c+="=",c+=b(d[u]);c=c+"&amp;emsg="+b(a.name+": "+a.message);c=c+"&amp;jsst="+b(a.stack||"N/A");12288&lt;=c.length&amp;&amp;(c=c.substr(0,12288));a=c;m||google.log(0,"",a);return a};window.onerror=function(a,b,d,m,e){r!==a&amp;&amp;(a=e instanceof Error?e:Error(a),void 0===d||"lineNumber"in a||(a.lineNumber=d),void 0===b||"fileName"in a||(a.fileName=b),google.ml(a,!1,void 0,!1,"SyntaxError"===a.name||"SyntaxError"===a.message.substring(0,11)||-1!==a.message.indexOf("Script error")?3:0));r=null;p&amp;&amp;q&gt;=l&amp;&amp;(window.onerror=null)};})();&lt;/script&gt;&lt;/head&gt;&lt;body bgcolor="#fff"&gt;&lt;script nonce="G19OPmib84oxBQUaA0BtSg"&gt;(function(){var src='/images/nav_logo229.png';var iesg=false;document.body.onload = function(){window.n &amp;&amp; window.n();if (document.images){new Image().src=src;}
+if (!iesg){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}
+}
+})();&lt;/script&gt;&lt;div id="mngb"&gt;&lt;div id=gbar&gt;&lt;nobr&gt;&lt;b class=gb1&gt;Search&lt;/b&gt; &lt;a class=gb1 href="https://www.google.com/imghp?hl=en&amp;tab=wi"&gt;Images&lt;/a&gt; &lt;a class=gb1 href="https://maps.google.ca/maps?hl=en&amp;tab=wl"&gt;Maps&lt;/a&gt; &lt;a class=gb1 href="https://play.google.com/?hl=en&amp;tab=w8"&gt;Play&lt;/a&gt; &lt;a class=gb1 href="https://www.youtube.com/?tab=w1"&gt;YouTube&lt;/a&gt; &lt;a class=gb1 href="https://news.google.com/?tab=wn"&gt;News&lt;/a&gt; &lt;a class=gb1 href="https://mail.google.com/mail/?tab=wm"&gt;Gmail&lt;/a&gt; &lt;a class=gb1 href="https://drive.google.com/?tab=wo"&gt;Drive&lt;/a&gt; &lt;a class=gb1 style="text-decoration:none" href="https://www.google.ca/intl/en/about/products?tab=wh"&gt;&lt;u&gt;More&lt;/u&gt; &amp;raquo;&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div id=guser width=100%&gt;&lt;nobr&gt;&lt;span id=gbn class=gbi&gt;&lt;/span&gt;&lt;span id=gbf class=gbf&gt;&lt;/span&gt;&lt;span id=gbe&gt;&lt;/span&gt;&lt;a href="http://www.google.ca/history/optout?hl=en" class=gb4&gt;Web History&lt;/a&gt; | &lt;a  href="/preferences?hl=en" class=gb4&gt;Settings&lt;/a&gt; | &lt;a target=_top id=gb_70 href="https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAAQ" class=gb4&gt;Sign in&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div class=gbh style=left:0&gt;&lt;/div&gt;&lt;div class=gbh style=right:0&gt;&lt;/div&gt;&lt;/div&gt;&lt;center&gt;&lt;br clear="all" id="lgpd"&gt;&lt;div id="lga"&gt;&lt;img alt="Seasonal Holidays 2023" border="0" height="200" src="/logos/doodles/2023/seasonal-holidays-2023-6753651837110165-law.gif" title="Seasonal Holidays 2023" width="500" id="hplogo"&gt;&lt;br&gt;&lt;/div&gt;&lt;form action="/search" name="f"&gt;&lt;table cellpadding="0" cellspacing="0"&gt;&lt;tr valign="top"&gt;&lt;td width="25%"&gt;&amp;nb... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20231230 03:57:40.152" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:39.955" endtime="20231230 03:57:40.152"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231230 03:57:40.153" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:40.152" endtime="20231230 03:57:40.154"/>
+</kw>
+<tag>api</tag>
+<status status="PASS" starttime="20231230 03:57:39.955" endtime="20231230 03:57:40.154"/>
+</test>
+<test id="s1-s1-s1-t2" name="Quick Get Request With Parameters Test" line="11">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://www.google.com/search</arg>
+<arg>params=query=ciao</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231230 03:57:40.870" level="INFO">GET Request : url=https://www.google.com/search?query=ciao 
+ path_url=/search?query=ciao 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231230 03:57:40.870" level="INFO">GET Response : url=https://www.google.com/search?query=ciao 
+ status=200, reason=OK 
+ headers={'Content-Type': 'text/html; charset=ISO-8859-1', 'Date': 'Sat, 30 Dec 2023 03:57:40 GMT', 'Expires': '-1', 'Cache-Control': 'private, max-age=0', 'Content-Security-Policy': "object-src 'none';base-uri 'self';script-src 'nonce-rcJNFpLzD06XFdTBVZIE4A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp", 'P3P': 'CP="This is not a P3P policy! See g.co/p3phelp for more info."', 'Content-Encoding': 'gzip', 'Server': 'gws', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'Set-Cookie': '1P_JAR=2023-12-30-03; expires=Mon, 29-Jan-2024 03:57:40 GMT; path=/; domain=.google.com; Secure, AEC=Ackid1RNkUJoZJmbvgSc0VjS1rqKy6Ji9CepKBKkhGh3uRRRqVc63TsifDU; expires=Thu, 27-Jun-2024 03:57:40 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=511=aiDsMLUGFvTirWVdocSoTFgP__78jem_HtnnCLDwWqcXqXscT_KRH_JQAERD88yQsR487UFrR9p7EbPVneNYcVChrASL28h7nPGrE-bryb2XmRF62l1SAJyg_8xFlvEV1EvWV4TyaAYmI64uX-qwMGHezAEMEoJA6qgBBnV-V1g; expires=Sun, 30-Jun-2024 03:57:40 GMT; path=/; domain=.google.com; HttpOnly', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
+ body=&lt;!doctype html&gt;&lt;html lang="en-CA"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta content="Au/rO0LZ4O4v4w/X5EVviSE5R8rYeBZLlFQ/bnO7UvokjKTjbgbg6arj/oq4lRJHk7nI/NOlRetOK+siM03uXAsAAABueyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jYTo0NDMiLCJmZWF0dXJlIjoiTG9uZ0FuaW1hdGlvbkZyYW1lVGltaW5nIiwiZXhwaXJ5IjoxNzA5NjgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=" http-equiv="origin-trial"&gt;&lt;meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"&gt;&lt;title&gt;ciao - Google Search&lt;/title&gt;&lt;script nonce="rcJNFpLzD06XFdTBVZIE4A"&gt;(function(){
+document.documentElement.addEventListener("submit",function(b){var a;if(a=b.target){var c=a.getAttribute("data-submitfalse");a="1"===c||"q"===c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener("click",function(b){var a;a:{for(a=b.target;a&amp;&amp;a!==document.documentElement;a=a.parentElement)if("A"===a.tagName){a="1"===a.getAttribute("data-nohref");break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);(function(){var a=window.performance;window.start=Date.now();a:{var b=window;if(a){var c=a.timing;if(c){var d=c.navigationStart,f=c.responseStart;if(f&gt;d&amp;&amp;f&lt;=window.start){window.start=f;b.wsrt=f-d;break a}}a.now&amp;&amp;(b.wsrt=Math.floor(a.now()))}}window.google=window.google||{};var h=function(g){g&amp;&amp;g.target.setAttribute("data-iml",String(Date.now()))};document.documentElement.addEventListener("load",h,!0);google.rglh=function(){document.documentElement.removeEventListener("load",h,!0)};}).call(this);(function(){window.google.erd={jsr:1,bv:1919,de:true};})();(function(){var sdo=false;var mei=10;
+var h=this||self;var k,l=null!=(k=h.mei)?k:1,n,p=null!=(n=h.sdo)?n:!0,q=0,r,t=google.erd,v=t.jsr;google.ml=function(a,b,d,m,e){e=void 0===e?2:e;b&amp;&amp;(r=a&amp;&amp;a.message);void 0===d&amp;&amp;(d={});d.cad="ple_"+google.ple+".aple_"+google.aple;if(google.dl)return google.dl(a,e,d),null;if(0&gt;v){window.console&amp;&amp;console.error(a,d);if(-2===v)throw a;b=!1}else b=!a||!a.message||"Error loading script"===a.message||q&gt;=l&amp;&amp;!m?!1:!0;if(!b)return null;q++;d=d||{};b=encodeURIComponent;var c="/gen_204?atyp=i&amp;ei="+b(google.kEI);google.kEXPI&amp;&amp;(c+="&amp;jexpid="+b(google.kEXPI));c+="&amp;srcpg="+b(google.sn)+"&amp;jsr="+b(t.jsr)+"&amp;bver="+
+b(t.bv);var f=a.lineNumber;void 0!==f&amp;&amp;(c+="&amp;line="+f);var g=a.fileName;g&amp;&amp;(0&lt;g.indexOf("-extension:/")&amp;&amp;(e=3),c+="&amp;script="+b(g),f&amp;&amp;g===window.location.href&amp;&amp;(f=document.documentElement.outerHTML.split("\n")[f],c+="&amp;cad="+b(f?f.substring(0,300):"No script found.")));google.ple&amp;&amp;1===google.ple&amp;&amp;(e=2);c+="&amp;jsel="+e;for(var u in d)c+="&amp;",c+=b(u),c+="=",c+=b(d[u]);c=c+"&amp;emsg="+b(a.name+": "+a.message);c=c+"&amp;jsst="+b(a.stack||"N/A");12288&lt;=c.length&amp;&amp;(c=c.substr(0,12288));a=c;m||google.log(0,"",a);return a};window.onerror=function(a,b,d,m,e){r!==a&amp;&amp;(a=e instanceof Error?e:Error(a),void 0===d||"lineNumber"in a||(a.lineNumber=d),void 0===b||"fileName"in a||(a.fileName=b),google.ml(a,!1,void 0,!1,"SyntaxError"===a.name||"SyntaxError"===a.message.substring(0,11)||-1!==a.message.indexOf("Script error")?3:0));r=null;p&amp;&amp;q&gt;=l&amp;&amp;(window.onerror=null)};})();(function(){var c=[],e=0;window.ping=function(b){-1==b.indexOf("&amp;zx")&amp;&amp;(b+="&amp;zx="+Date.now());var a=new Image,d=e++;c[d]=a;a.onerror=a.onload=a.onabort=function(){delete c[d]};a.src=b};}).call(this);&lt;/script&gt;&lt;style&gt;a{color:#1a0dab;text-decoration:none;tap-highlight-color:rgba(0,0,0,.10)}a:visited{color:#4b11a8}a:hover{text-decoration:underline}img{border:0}html{font-family:arial,sans-serif;font-size:14px;line-height:20px;text-size-adjust:100%;color:#3c4043;word-wrap:break-word;background-color:#fff}.bRsWnc{background-color:#fff;border-top:1px solid #dadce0;height:39px;overflow:hidden}.N6RWV{height:51px;overflow-scrolling:touch;overflow-x:auto;overflow-y:hidden}.Uv67qb{box-pack:justify;font-size:12px;line-height:37px;justify-content:space-between;justify-content:space-between}.Uv67qb a,.Uv67qb span{color:#70757a;display:block;flex:none;padding:0 16px;text-align:center;text-transform:uppercase;}span.OXXup{border-bottom:2px solid #4285f4;color:#4285f4;font-weight:bold}a.eZt8xd:visited{color:#70757a}.FElbsf{border-left:1px solid rgba(0,0,0,.12)}header article{overflow:visible}.Pg70bf{height:39px;display:box;display:flex;display:flex;width:100%}.H0PQec{position:relative;flex:1}.sbc{display:flex;width:100%}.Pg70bf input{margin:2px 4px 2px 8px;}.x{width:26px;color:#70757a;font:27px/38px arial, sans-serif;line-height:40px;}#qdClwb{flex:0 0 auto;width:39px;height:39px;border-bottom:0;padding:0;border-top-right-radius:8px;background-color:#1a73e8;border:1px solid #1a73e8;background-image:url(data:image/gif;base64,R0lGODdhJAAjAPIHAODr/nCk+MPZ/FmV96zK+/7+/5K5+kqL9iwAAAAAJAAjAEADani63P4wykmbKcQRXDscQAEMXmmeaLQVLCukzyC09AjfeK7v/MAajACLhPMVAgwjsUcEiZa8xgAYrVqv2Kx2iwsIAAABknfBBAKrTE4IcMyot8ur8datqIbQfJdnAfo2WE6BV05wXIiJigkAOw==);}.sc{font-size:16px;position:absolute;top:39px;left:0;right:0;box-shadow:0 2px 5px rgba(0,0,0,.2);z-index:2;background-color:#fff}.sc&gt;div{padding:10px 10px;padding-left:16px;padding-left:14px;border-top:1px solid #dfe1e5;}.scs{background-color:#fafafa;}.noHIxc{display:block;font-size:16px;padding:0 0 0 8px;flex:1;height:35px;outline:none;border:none;width:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);overflow:hidden;}.sbc input[type=text]{background:none}.bz1lBb{background-color:#fff;border-radius:8px 8px 0 0;box-shadow:0 0 0 1px #dfe1e5;margin-top:24px;}.KP7LCb{border-radius:0 0 8px 8px;box-shadow:0px 1px 0px 1px #dfe1e5;margin-bottom:30px;overflow:hidden}html{background-color:#fff}body{margin:0 auto 0 156px;max-width:652px;min-width:652px;padding:0 8px}.cOl4Id{letter-spacing:-1px;text-align:center;font:22pt Futura, Arial, sans-serif;height:37px;font-smoothing:antialiased;padding:32px 28px 0 24px;position:absolute;left:0;top:0}.cOl4Id span{display:inline-block}.V6gwVd{color:#4285f4}.iWkuvd{color:#ea4335}.cDrQ7{color:#fcc934}.ntlR9{color:#34a853}.tJ3Myc{-webkit-transform:rotate(-20deg);position:relative;left:-1px;display:inline-block}footer{text-align:center;margin-top:18px}footer a,footer a:visited,.smiUbb{color:#70757a}.xeDNfc{margin:0 13px;display:inline-block}#EOlPnc{margin-top:36px}#EOlPnc&gt;div{margin:20px}.Srfpq{color:#70757a}&lt;/style&gt;&lt;/head&gt;&lt;body jsmodel="hspDDf"&gt;&lt;header id="hdr"&gt;&lt;script nonce="rcJNFpLzD06XFdTBVZIE4A"&gt;(function(){
+var k=this||self,l=function(a){var b=typeof a;return"object"==b&amp;&amp;null!=a||"function"==b},m=function(a,b){function c(){}c.prototype=b.prototype;a.j=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.l=function(d,e,f){for(var g=Array(arguments.length-2),h=2;h&lt;arguments.length;h++)g[h-2]=arguments[h];return b.prototype[e].apply(d,g)}};var n=Array.prototype.indexOf?function(a,b){return Array.prototype.indexOf.call(a,b,void 0)}:function(a,b){if("string"===typeof a)return"string"!==typeof b||1!=b.length?-1:a.indexOf(b,0);for(var c=0;c&lt;a.length;c++)if(c in a&amp;&amp;a[c]===b)return c;return-1};var p=function(a){return"string"==typeof a.className?a.className:a.getAttribute&amp;&amp;a.getAttribute("class")||""},q=function(a,b){"string"==typeof a.className?a.className=b:a.setAttribute&amp;&amp;a.setAttribute("class",b)},r=function(a,b){a.classList?b=a.classList.contains(b):(a=a.classList?a.classList:p(a).match(/\S+/g)||[],b=0&lt;=n(a,b));return b},v=function(){var a=t,b=u;a.classList?a.classList.remove(b):r(a,b)&amp;&amp;q(a,Array.prototype.filter.call(a.classList?a.classList:p(a).match(/\S+/g)||[],function(c){return c!=
+b}).join(" "))};function w(){var a=k.navigator;return a&amp;&amp;(a=a.userAgent)?a:""};var x=function(a){x[" "](a);return a};x[" "]=function(){};var y=-1!=w().indexOf("Gecko")&amp;&amp;!(-1!=w().toLowerCase().indexOf("webkit")&amp;&amp;-1==w().indexOf("Edge"))&amp;&amp;!(-1!=w().indexOf("Trident")||-1!=w().indexOf("MSIE"))&amp;&amp;-1==w().indexOf("Edge");var z=function(a,b){this.type=a;this.target=b};z.prototype.g=function(){};var A=function(){if(!k.addEventListener||!Object.defineProperty)return!1;var a=!1,b=Object.defineProperty({},"passive",{get:function(){a=!0}});try{var c=function(){};k.addEventListener("test",c,b);k.removeEventListener("test",c,b)}catch(d){}return a}();var C=function(a){z.call(this,a?a.type:"");this.relatedTarget=this.target=null;this.button=this.screenY=this.screenX=this.clientY=this.clientX=0;this.key="";this.keyCode=0;this.metaKey=this.shiftKey=this.altKey=this.ctrlKey=!1;this.state=null;this.pointerId=0;this.pointerType="";this.h=null;if(a){var b=this.type=a.type,c=a.changedTouches&amp;&amp;a.changedTouches.length?a.changedTouches[0]:null;this.target=a.target||a.srcElement;var d=a.relatedTarget;if(d){if(y){a:{try{x(d.nodeName);var e=!0;break a}catch(f){}e=
+!1}e||(d=null)}}else"mouseover"==b?d=a.fromElement:"mouseout"==b&amp;&amp;(d=a.toElement);this.relatedTarget=d;c?(this.clientX=void 0!==c.clientX?c.clientX:c.pageX,this.clientY=void 0!==c.clientY?c.clientY:c.pageY,this.screenX=c.screenX||0,this.screenY=c.screenY||0):(this.clientX=void 0!==a.clientX?a.clientX:a.pageX,this.clientY=void 0!==a.clientY?a.clientY:a.pageY,this.screenX=a.screenX||0,this.screenY=a.screenY||0);this.button=a.button;this.keyCode=a.keyCode||0;this.key=a.key||"";this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=a.metaKey;this.pointerId=a.pointerId||0;this.pointerType="string"===typeof a.pointerType?a.pointerType:B[a.pointerType]||"";this.state=a.state;this.h=a;a.defaultPrevented&amp;&amp;C.j.g.call(this)}};m(C,z);var B={2:"touch",3:"pen",4:"mouse"};C.prototype.g=function(){C.j.g.call(this);var a=this.h;a.preventDefault?a.preventDefault():a.returnValue=!1};var D="closure_listenable_"+(1E6*Math.random()|0);var E=0;var F=function(a,b,c,d,e){this.listener=a;this.proxy=null;this.src=b;this.type=c;this.capture=!!d;this.h=e;this.key=++E;this.g=this.i=!1},G=function(a){a.g=!0;a.listener=null;a.proxy=null;a.src=null;a.h=null};var H=function(a){this.src=a;this.g={};this.h=0};H.prototype.add=function(a,b,c,d,e){var f=a.toString();a=this.g[f];a||(a=this.g[f]=[],this.h++);var g;a:{for(g=0;g&lt;a.length;++g){var h=a[g];if(!h.g&amp;&amp;h.listener==b&amp;&amp;h.capture==!!d&amp;&amp;h.h==e)break a}g=-1}-1&lt;g?(b=a[g],c||(b.i=!1)):(b=new F(b,this.src,f,!!d,e),b.i=c,... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20231230 03:57:40.872" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:40.156" endtime="20231230 03:57:40.872"/>
+</kw>
+<tag>api</tag>
+<status status="PASS" starttime="20231230 03:57:40.155" endtime="20231230 03:57:40.872"/>
+</test>
+<test id="s1-s1-s1-t3" name="Quick Get A JSON Body Test" line="15">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://jsonplaceholder.typicode.com/posts/1</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231230 03:57:41.029" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231230 03:57:41.029" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 30 Dec 2023 03:57:41 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1701389054&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=hHbqpcEQ%2BgI533VIWle7hvuh32ZEBP4Vm481vyGflvg%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1701389054&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=hHbqpcEQ%2BgI533VIWle7hvuh32ZEBP4Vm481vyGflvg%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1701389098', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '5723', 'Server': 'cloudflare', 'CF-RAY': '83d75c2b785f38e4-YYZ', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+} 
+ </msg>
+<msg timestamp="20231230 03:57:41.029" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:40.873" endtime="20231230 03:57:41.029"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>1</arg>
+<arg>${response.json()}[id]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231230 03:57:41.031" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:41.030" endtime="20231230 03:57:41.031"/>
+</kw>
+<tag>api</tag>
+<status status="PASS" starttime="20231230 03:57:40.873" endtime="20231230 03:57:41.031"/>
+</test>
+<status status="PASS" starttime="20231230 03:57:39.889" endtime="20231230 03:57:41.033"/>
+</suite>
+<status status="PASS" starttime="20231230 03:57:39.887" endtime="20231230 03:57:41.034"/>
+</suite>
+<suite id="s1-s2" name="UI Browser" source="/home/code/robot/TestCases/UI_Browser">
+<suite id="s1-s2-s1" name="Demo" source="/home/code/robot/TestCases/UI_Browser/Demo.robot">
+<kw name="UI Test Setup" type="SETUP">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>${recordVideo}</arg>
+<if>
+<branch type="IF" condition="${recordVideo} == ${True}">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${videoDict}</var>
+<arg>dir=./videos</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231230 03:57:41.689" level="INFO">${videoDict} = {'dir': './videos'}</msg>
+<status status="PASS" starttime="20231230 03:57:41.688" endtime="20231230 03:57:41.689"/>
+</kw>
+<status status="PASS" starttime="20231230 03:57:41.688" endtime="20231230 03:57:41.689"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${videoDict}</var>
+<arg>${None}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231230 03:57:41.689" endtime="20231230 03:57:41.689"/>
+</kw>
+<status status="NOT RUN" starttime="20231230 03:57:41.689" endtime="20231230 03:57:41.689"/>
+</branch>
+<status status="PASS" starttime="20231230 03:57:41.688" endtime="20231230 03:57:41.689"/>
+</if>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>headless=${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231230 03:57:41.690" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/code/robot/Reports/97565486/browser/traces/3fbcfd0a-9ae1-45e9-8df7-07750de91a8d"}</msg>
+<msg timestamp="20231230 03:57:41.952" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/code/robot/Reports/97565486/browser/traces/3fbcfd0a-9ae1-45e9-8df7-07750de91a8d"}</msg>
+<status status="PASS" starttime="20231230 03:57:41.690" endtime="20231230 03:57:41.953"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>recordVideo=${videoDict}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20231230 03:57:41.956" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "recordVideo": {
+    "dir": "/home/code/robot/Reports/97565486/browser/video/videos",
+    "size": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg timestamp="20231230 03:57:41.972" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231230 03:57:41.972" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'recordVideo': {'dir': '/home/code/robot/Reports/97565486/browser/video/videos', 'size': {'height': 720, 'width': 1280}}, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<status status="PASS" starttime="20231230 03:57:41.953" endtime="20231230 03:57:41.972"/>
+</kw>
+<status status="PASS" starttime="20231230 03:57:41.687" endtime="20231230 03:57:41.972"/>
+</kw>
+<test id="s1-s2-s1-t1" name="Test UI Components" line="14">
+<kw name="New Page" library="Browser">
+<arg>https://robotframework-browser.org/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20231230 03:57:43.417" level="INFO">Successfully initialized new page object and opened url: https://robotframework-browser.org/</msg>
+<msg timestamp="20231230 03:57:43.418" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;video width="1280" height="720" controls&gt;&lt;source src="browser/video/videos/ef2f6d6ddfbbe3a2e2ddcdd36935b8ef.webm" type="video/webm"&gt;&lt;/video&gt;</msg>
+<status status="PASS" starttime="20231230 03:57:41.977" endtime="20231230 03:57:43.418"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>10 sec</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" starttime="20231230 03:57:43.419" endtime="20231230 03:57:43.419"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>Browser Library</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231230 03:57:43.435" level="INFO">Title: 'Browser Library'</msg>
+<status status="PASS" starttime="20231230 03:57:43.420" endtime="20231230 03:57:43.435"/>
+</kw>
+<tag>ui</tag>
+<status status="PASS" starttime="20231230 03:57:41.973" endtime="20231230 03:57:43.435"/>
+</test>
+<kw name="UI Test Tearup" type="TEARDOWN">
+<kw name="Close Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<msg timestamp="20231230 03:57:43.494" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=164eaab1-8ff7-4d50-a4b7-5b92104fc696",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=e39e94b7-01a1-477a-96c4-3c1f588a1066",
+        "pages": []
+      }
+    ],
+    "activeContext": "context=e39e94b7-01a1-477a-96c4-3c1f588a1066",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20231230 03:57:43.494" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20231230 03:57:43.498" level="INFO">Returned active browser id. CURRENT</msg>
+<msg timestamp="20231230 03:57:43.498" level="INFO">Switching browser to browser=164eaab1-8ff7-4d50-a4b7-5b92104fc696</msg>
+<msg timestamp="20231230 03:57:43.501" level="INFO">Successfully changed active browser: browser=164eaab1-8ff7-4d50-a4b7-5b92104fc696</msg>
+<msg timestamp="20231230 03:57:43.502" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20231230 03:57:43.505" level="INFO">Returned active context id: CURRENT</msg>
+<msg timestamp="20231230 03:57:43.507" level="INFO">Switching context to context=e39e94b7-01a1-477a-96c4-3c1f588a1066 in CURRENT</msg>
+<msg timestamp="20231230 03:57:43.511" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=164eaab1-8ff7-4d50-a4b7-5b92104fc696",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=e39e94b7-01a1-477a-96c4-3c1f588a1066",
+        "pages": []
+      }
+    ],
+    "activeContext": "context=e39e94b7-01a1-477a-96c4-3c1f588a1066",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20231230 03:57:43.515" level="INFO">Successfully changed active context: context=e39e94b7-01a1-477a-96c4-3c1f588a1066</msg>
+<msg timestamp="20231230 03:57:43.892" level="INFO">Successfully closed Context</msg>
+<status status="PASS" starttime="20231230 03:57:43.489" endtime="20231230 03:57:43.892"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20231230 03:57:43.918" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20231230 03:57:43.892" endtime="20231230 03:57:43.918"/>
+</kw>
+<status status="PASS" starttime="20231230 03:57:43.489" endtime="20231230 03:57:43.918"/>
+</kw>
+<status status="PASS" starttime="20231230 03:57:41.038" endtime="20231230 03:57:43.919"/>
+</suite>
+<status status="PASS" starttime="20231230 03:57:41.036" endtime="20231230 03:57:43.928"/>
+</suite>
+<status status="PASS" starttime="20231230 03:57:39.863" endtime="20231230 03:57:43.929"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">api</stat>
+<stat pass="1" fail="0" skip="0">ui</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="API Test">TestCases.API Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="API Demo">TestCases.API Test.API Demo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="UI Browser">TestCases.UI Browser</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2-s1" name="Demo">TestCases.UI Browser.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
