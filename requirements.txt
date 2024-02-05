@@ -10,3 +10,5 @@ numpy
 tensorflow==2.15.0
 scikit-learn
 mediapipe
+streamlit
+streamlit-option-menu

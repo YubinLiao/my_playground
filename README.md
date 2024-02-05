@@ -7,6 +7,8 @@ This is my play ground to explore some idea about Python and machine learning pr
 At the moment, fastapi microservices implemented for:
 - fastapi deployment for machine learning model of traffic sign classification
 - prototype of test services for API and web UI application
+- a simple web ui application to trigger test run and view test result.
+- a simple web ui for traffic sign image classification
 
 ## Get Started
 - pre-requisite: Python3.10, nodejs
@@ -40,6 +42,15 @@ docker run -v {local directory paty}:/home/code/robot/Reports -p 8000:8000 -it {
 ```shell
     uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
+- start the web ui application
+```shell
+    streamlit run app/ui_demo.py
+```
+- open up web UI in browser: http://localhost:8501/
+![img.png](document/UI Submit Job.png)
+![img.png](document/UI view job.png)
+![img.png](document/UI traffic Sign.png)
+
 
 ## Folder Structure
 
