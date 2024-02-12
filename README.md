@@ -47,9 +47,9 @@ docker run -v {local directory paty}:/home/code/robot/Reports -p 8000:8000 -it {
     streamlit run app/ui_demo.py
 ```
 - open up web UI in browser: http://localhost:8501/
-![img.png](document/UI Submit Job.png)
-![img.png](document/UI view job.png)
-![img.png](document/UI traffic Sign.png)
+![img.png](document/UISubmitJob.png)
+![img.png](document/UIviewjob.png)
+![img.png](document/UItrafficSign.png)
 
 
 ## Folder Structure
